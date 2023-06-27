@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: /test/
+Disallow: /quotes/
+Disallow: /cgi-bin/
+Disallow: /images/
+Disallow: /cases/case.sty
+Disallow: /lpdi1.0/cases/
+Disallow: /lpdi1.0/home/
+Disallow: /lpdi1.0/misc/
+Disallow: /lpdi1.0/quotes/
+Disallow: /lpdi1.0/toc.sty
+Disallow: /lpdi1.0/treatise.sty
+Disallow: /lpdi1.0/index.html
+Disallow: /misc/dummy.html
+Disallow: /CONTU/PDF/
+Disallow: /CONTU/contu.sty
