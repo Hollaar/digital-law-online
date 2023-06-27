@@ -1,0 +1,302 @@
+<html>
+<head>
+<title>In re Freeman</title>
+<link rel="Stylesheet" type="text/css" href="case.sty">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+<div class=Section1>
+
+<p class=Name>In re Freeman</p>
+
+<p class=Court>U.S. Court of Customs and Patent Appeals</p>
+
+<p class=CaseDate>March 30, 1978</p>
+
+<p class=CaseCite>573 F.2d 1237, 197 USPQ 464</p>
+
+<p class=Judge>Markey, Chief Judge.</p>
+
+<p class=Paragraph>Appeal from the decision of the Patent and Trademark Office (PTO) Board of Appeals (board), affirming the rejection of claims 1-10, all of the claims in application serial No. 32,025, filed May 6, 1970, and entitled “Computer Typesetting.” We reverse.</p>
+
+<h2>The Invention</h2>
+
+<p class=Paragraph>The subject matter of Freeman’s invention is a system for typesetting alphanumeric information, using a computer-based control system in conjunction with a phototypesetter of conventional design. Freeman’s overall scheme is represented by Figure 1 of his application. <span class=SourcePN>&lt;197 USPQ 466&gt;</span><A name="197USPQ466"></A> [Figure omitted.]</p>
+
+<p class=Paragraph>Input device 140 provides the identities of symbols and alphanumeric characters to be composed and the positional commands for placement of such symbols and characters in the final composition. Although shown in Figure 1 as a keyboard, input device 140 may be a card reader, a magnetic or paper tape reader, or other known input device. <span class=SourcePN>&lt;573 F.2d 1239&gt;</span><A name="573F.2d1239"></A> Memory 160 stores character specifications and provides computer 100 with detailed information about the exact nature of the characters which may be selected by coded input signals from input device 140. Memory 160 may be part of computer memory 130. Computer 100 represents a broad category of data processors, including general purpose digital computers.</p>
+
+<p class=Paragraph>Output unit 170 receives character position signals from computer 100 and generates a permanent record of the desired positional relationship of the characters. As shown in Figure 1, output unit 170 may include a display device, such as cathode ray tube (CRT) 175, and a photographic system, such as camera 176. Output unit 170 may also be a computer microfilm printer, or other means of producing a permanent record.</p>
+
+<p class=Paragraph>Freeman’s system is especially useful in printing mathematical formulae. Its particular advantage over prior computer-aided printing systems is its positioning of mathematical symbols in an expression in accordance with their appearance, while maintaining the mathematical integrity of the expression.</p>
+
+<p class=Paragraph>The functioning of appellant’s invention is best understood in appellant’s example, wherein the objective is the photocomposing of the mathematical expression: [Figure omitted.]</p>
+
+<p class=Paragraph>One embodiment of appellant’s invention employs a hierarchical “tree structure” computer storage arrangement. Applied to the above mathematical expression, the hierarchical arrangement produces this tree structure: [Figure omitted.]</p>
+
+<p class=Paragraph>Each particular tree structure depends on spatial relationships of the symbols, not on their mathematical meaning, i.e., all symbols, whether characters or operators, are treated in the same way. As in Figure 3 above, the “head” of the tree structure is the symbol at the extreme left of the main line of the formula. New “branches” of the <span class=SourcePN>&lt;573 F.2d 1240&gt;</span><A name="573F.2d1240"></A> tree are started by those symbols which begin new lines, above, on, or below the main line of the formula, e.g., exponents and initial symbols of numerators and denominators.</p>
+
+<p class=Paragraph>The tree structure storage arrangement is used to determine the sequence, indicated by the circled numbers in Figure 3, in which the symbols of the formula are processed by the “local positioning algorithm” disclosed by appellant. Symbols attached by arrows leading out from a given symbol are called “subordinates” of the given symbol. In Figure 3, for example, the “1,” the “7,” and the “h” are subordinates of the integral sign.</p>
+
+<p class=Paragraph>Another basic feature of appellant’s invention is the use of a set of “concatenation points” for each character. Prior art devices, like the typical Linotype machine, employed a rectangular, edge-to-edge concatenation system. Appellant’s sets of concatenation points correspond roughly to the eight major compass directions, as shown in this figure: [Figure omitted.]</p>
+
+<p class=Paragraph>To form the expression “2†” from the above characters, the West concatenation point of the “†” is specified to coincide with the East concatenation point of the “2”. A particular advantage of appellant’s concatenation point positioning technique is its applicability to both straight linear text and to subscripts, superscripts, division signs, and integral signs. To form the expression “†<sup>2</sup>”, the <span class=SourcePN>&lt;197 USPQ 467&gt;</span><A name="197USPQ467"></A> Southwest concatenation point of the “small 2” is specified to coincide with the Northeast concatenation point of the “†”.</p>
+
+<p class=Paragraph>Appellant’s local positioning algorithm, using concatenation points to typeset mathematical expressions stored in a hierarchical tree structure, is disclosed in its simplest form:</p>
+
+<p class=BlockQuote>(1) Cause an appropriate (specified) concatenation point for subordinates of a given symbol to coincide with appropriate (specified) concatenation points for that given symbol. * * *.</p>
+
+<p class=BlockQuote>(2) The order of symbol processing is as follows:</p>
+
+<p class=DblBlockQuote>(a) Along a given branch of the tree, positioning starts at the right-hand end and works back to the left. It should be understood that right and left refer to the structure as shown in FIG. 3 (head at the left). It may be convenient to represent and/or store the structure in a vertical arrangement with the “head” at the top or bottom. In all cases, however, the order of positioning will proceed in a given branch in a direction toward the head of the structure.</p>
+
+<p class=DblBlockQuote>(b) If a given symbol along a given branch has subordinate symbols that start new branches, all of these new branches are positioned internally (with respect to the given symbol) before any positioning is performed on the given symbol of the given branch. For example, in FIG. 3, the symbols in the branch started by the left parenthesis “(“ that is a subordinate of the horizontal division sign are positioned relative to each other before the local positioning algorithm is applied to any of the symbols on the main (division sign) branch.</p>
+
+<p class=Paragraph>In sum, appellant’s invention includes three signal-processing steps. First, the input codes are read, and a tree structure of symbols representing the mathematical expression is built. Second, the signals specifying the relative concatenation point positions of the symbols are composed by application of the local positioning algorithm. Third, an image of the expression, with all symbols in proper position, is generated on the CRT or other output device.</p>
+
+<h2>The Claims</h2>
+
+<p class=BlockQuote>Claims 1-7 are apparatus claims:</p>
+
+<p class=BlockQuote>1. In a computer display system comprising <span class=SourcePN>&lt;573 F.2d 1241&gt;</span><A name="573F.2d1241"></A> </p>
+
+<p class=DblBlockQuote>(A) a display device for generating relatively-positioned symbol images in response to applied sequences of signals specifying the shape and position of said images,</p>
+
+<p class=DblBlockQuote>(B) a data processor comprising</p>
+
+<p class=DblBlockQuote>(1) means for storing a first plurality of data sequences, each describing individual symbols, and a second plurality of data sequences corresponding to a control program,</p>
+
+<p class=DblBlockQuote>(2) means responsive to said control program for nondestructively reading from said means for storing and transferring to said display device selected ones of said first plurality of data sequences,</p>
+
+<p class=DblBlockQuote>(3) means responsive to said control program for generating and transferring to said display device data sequences specifying the desired position of at least a first one of said selected data sequences, the improvement comprising</p>
+
+<p class=DblBlockQuote>means for storing additional information specifying spatial coordinate positions, relative to a reference point on a corresponding symbol, of a plurality of concatenation points associated with said corresponding symbol, and</p>
+
+<p class=DblBlockQuote>means responsive to said control program for generating and transferring to said display device data signals specifying the coincidence of at least one specified concatenation points [sic] on adjacent symbols.</p>
+
+<p class=BlockQuote>2. The system of claim 1 further comprising input means for modifying said control program by providing input data specifying the desired positioning of said images.</p>
+
+<p class=BlockQuote>3. The system of claim 2 further comprising means for storing said input data in a hierarchical tree structure, the lowest level branch of said structure corresponding to the position of the symbol described by said first one of said selected data sequences, successively higher branches of said structure indicating the position of corresponding symbols relative to the position of the symbol described by said first one of said selected data sequences.</p>
+
+<p class=BlockQuote>4. The system of claim 3 further comprising editing means responsive to the images generated by said display device and to said control program for modifying the relative position of selected ones of said images.</p>
+
+<p class=BlockQuote>5. The system of claim 3 [sic, 4?] wherein said editing means comprises a light sensitive device for generating signals indicating desired image positions and program controlled means for modifying <span class=SourcePN>&lt;197 USPQ 468&gt;</span><A name="197USPQ468"></A> said data signals specifying the coincidence of concatenation points.</p>
+
+<p class=BlockQuote>6. A display system comprising</p>
+
+<p class=DblBlockQuote>(A) a display device responsive to applied information signals for generating images,</p>
+
+<p class=DblBlockQuote>(B) means for storing display information corresponding to a plurality of display entities, said display information comprising entity identification information and information identifying the position of a plurality of concatenation points corresponding to each of said display entities,</p>
+
+<p class=DblBlockQuote>(C) programmed controlled means for generating position signals specifying the relative position of selected ones of said display entities by specifying the coincidence of at least one of the concatenation points associated with one of said selected ones of said display entities with appropriate concatenation points associated with adjacent ones of said selected display entities, and</p>
+
+<p class=DblBlockQuote>(D) means for applying entity-identification signals and associated position signals to said display device.</p>
+
+<p class=BlockQuote>7. The system of claim 6 further comprising means responsive to said entity identification signals and said position signals corresponding to said adjacent ones of said selected display entities for <span class=SourcePN>&lt;573 F.2d 1242&gt;</span><A name="573F.2d1242"></A> testing for lack of a minimum clearance between said selected display entities, and means responsive to said means for testing to modify said position signals when said lack of minimum clearance appears.</p>
+
+<p class=Paragraph>Claims 8-10 are method claims:</p>
+
+<p class=BlockQuote>8. In a computer display system comprising</p>
+
+<p class=DblBlockQuote>(A) a display device for generating relatively-positioned symbol images in response to applied sequences of signals specifying the shape and position of said images,</p>
+
+<p class=DblBlockQuote>(B) a data processor comprising</p>
+
+<p class=DblBlockQuote>(1) means for storing a first plurality of data sequences, each describing individual symbols, and a second plurality of data sequences corresponding to a control program,</p>
+
+<p class=DblBlockQuote>(2) means responsive to said control program for nondestructively reading from said means for storing and transferring to said display device selected ones of said first plurality of data sequences,</p>
+
+<p class=DblBlockQuote>(3) control means comprising means responsive to said control program for generating and transferring to said display device data sequences specifying the desired position of symbols corresponding to said selected data sequences,</p>
+
+<p class=BlockQuote>the method of controlling said system comprising the steps of</p>
+
+<p class=DblBlockQuote>(A) generating data sequences corresponding to concatenation points associated with each of said symbol images, and</p>
+
+<p class=DblBlockQuote>(B) generating data sequences specifying that selected ones of said concatenation points associated with desirably adjacent symbol images should occupy identical spatial positions.</p>
+
+<p class=BlockQuote>9. The method of claim 8 further comprising the steps of</p>
+
+<p class=DblBlockQuote>(A) testing said data sequences specifying the position of said desirably adjacent symbol images for lack of a minimum clearence therebetween, and</p>
+
+<p class=DblBlockQuote>(B) modifying said data sequences corresponding to at least one of said concatenation points associated with said desirably adjacent symbol images.</p>
+
+<p class=BlockQuote>10. The method of claim 8 further comprising the steps of</p>
+
+<p class=DblBlockQuote>(A) generating a sequence of input signals representing the desired position of said selected ones of said individual symbols</p>
+
+<p class=DblBlockQuote>(B) generating hierarchically structured signals representing the branches of a tree structure corresponding to the relative position of said selected ones of said individual symbols, higher order signals corresponding to the position of symbols subordinate to symbols represented by lower order symbols</p>
+
+<p class=DblBlockQuote>(C) operating sequentially on said hierarchically structured signals to generate said data sequences specifying the desired position of said selected ones of said individual symbols.</p>
+
+<h2>Board</h2>
+
+<p class=Paragraph>The examiner rejected claims 1-10 for incomplete disclosure, under 35 USC 112, and claims 8-10 as drawn to nonstatutory subject matter, i.e., “mental steps,” under 35 USC 100, 101. The board reversed both rejections, and entered a new ground of rejection, as authorized by 37 CFR 196(b), rejecting all claims as directed to nonstatutory subject matter under the principles of Gottschalk v. Benson, 409 U.S. 63, 175 USPQ 673 (1972).<a href="#_ftn1" name="_ftnref1" title=""><span class=FNRef>1</span></a><span class=SourcePN>&lt;197 USPQ 469&gt;</span><A name="197USPQ469"></A> </p>
+
+<p class=Paragraph>The board construed the claims “to cover a known program loaded display typesetting device wherein the novelty resides in the program.” In applying Benson, the <span class=SourcePN>&lt;573 F.2d 1243&gt;</span><A name="573F.2d1243"></A> board said the improvement covered by the claims appeared to have no substantial practical application except in connection with a digital computer and that the coverage sought “in practical effect would be a patent on the algorithm itself.” That claims 1-7 were apparatus claims was dismissed on the view that appellant should not be allowed to claim indirectly what he cannot claim directly with method language.</p>
+
+<p class=Paragraph>Neither the examiner nor the board questioned that appellant’s invention, as claimed, was new, useful, and unobvious.<a href="#_ftn2" name="_ftnref2" title=""><span class=FNRef>2</span></a></p>
+
+<h1>Issue</h1>
+
+<p class=Paragraph>The sole issue is whether the systems recited in claims 1-7 and the methods recited in claims 8-10 constitute statutory subject matter under 35 USC 101.<a href="#_ftn3" name="_ftnref3" title=""><span class=FNRef>3</span></a></p>
+
+<h1>Opinion</h1>
+
+<h2>The Board’s Application of Benson</h2>
+
+<p class=Paragraph>The board looked to the “nutshell” holding in Benson:</p>
+
+<p class=BlockQuote>    It is conceded that one may not patent an idea. But in practical effect that would be the result if the formula for converting BCD numerals to pure binary numerals were patented in this case. The mathematical formula involved here has no substantial practical application except in connection with a digital computer, which means that if the judgment below is affirmed, the patent would wholly pre-empt the mathematical formula and in practical effect would be a patent on the algorithm itself. [409 U.S. at 71-72, 175 USPQ at 676].</p>
+
+<p class=Paragraph>In applying the “principles set down” in Benson, the board decided that “the novelty resides in the program,” and concluded, without further analysis of the claims themselves, that the results foreseen in the “nutshell” holding would ensue. We disagree with the approach taken and the conclusion reached by the board.</p>
+
+<p class=Paragraph>We have indicated the inappropriateness of the “point of novelty” approach in determining whether a claimed invention is statutory subject matter under 35 USC 101. See In re de Castelet, 562 F.2d 1236, 1240, 195 USPQ 439, 443 (CCPA 1977); In re Chatfield, 545 F.2d 152, 158, 191 USPQ 730, 736 (CCPA 1976), cert. denied, 98 S.Ct. 226, 195 USPQ 465 (1977). Though the solicitor refers to language appearing in In re Christensen, 478 F.2d 1392, 178 USPQ 35 (CCPA 1973), we clarified that <span class=SourcePN>&lt;573 F.2d 1244&gt;</span><A name="573F.2d1244"></A> language in In re Chatfield, supra at 158, 191 USPQ at 736:</p>
+
+<p class=BlockQuote>Our reference in Christensen to the mathematical equation as being “at the point of novelty” does not equate to a holding that a claim may be dissected, the claim components searched in the prior art and, if the only component found novel is outside the statutory classes of invention, the claim may be rejected under 35 USC 101. That procedure is neither correct nor within the intent of Congress, for the reasons we stated in [In re Bernhart, 57 CCPA 737, 417 F.2d 1395, 163 USPQ 611 (1969)].</p>
+
+<p class=Paragraph>In reversing the examiner, the board considered In re Christensen, supra, inapposite <span class=SourcePN>&lt;197 USPQ 470&gt;</span><A name="197USPQ470"></A> because the data here operated upon, i.e., symbols and their concatenation points, were not in the prior art. “Thus” said the board, “the instant case involves more than the mere practice of an algorithm or formula on data considered to be old and well known.”</p>
+
+<p class=Paragraph>The solicitor contends that Graham v. John Deere Co., 383 U.S. 1, 32-33, 148 USPQ 459, 472-73 (1966), supports the board’s “point of novelty” approach. The issue in Graham, however, was obviousness under 35 USC 103, a statutory provision specifically requiring that the subject matter sought to be patented be considered “as a whole.” Nothing in Graham can be read as an effort to redraft the statute so as to delete the words “as a whole” from 35 USC 103,<a href="#_ftn4" name="_ftnref4" title=""><span class=FNRef>4</span></a> and nothing therein had anything to do with whether particular subject matter constitutes a machine, manufacture, composition of matter or process under 35 USC 101. Analyses of specific facts in a §103 case cannot serve as an “example” to be followed in determining whether claimed subject matter is within a statutory class of §101.</p>
+
+<p class=Paragraph>The board chose to read Benson much too broadly. The solicitor states the PTO’s view of the Benson holding as being “that a patent should not be granted where the only novelty resides in a program for a general purpose digital computer.” That overly broad reading, whatever purpose it may be intended to serve in the PTO, is unjustified. That computer programs are not patentable was neither the holding nor the “thrust” of Benson. In re de Castelet, supra; In re Chatfield, supra. Neither this court nor the PTO is at liberty to disregard the words of the Court in Benson: “It is said that the decision precludes a patent for any program servicing a computer. We do not so hold.” 409 U.S. at 71, 175 USPQ at 676.<a href="#_ftn5" name="_ftnref5" title=""><span class=FNRef>5</span></a> Nor is this court or the PTO at liberty to ignore the Court’s own characterization of its Benson holding: “Our limited holding * * * was that respondent’s method was not a patentable process as that term is defined in 35 U.S.C. §100(b).” Dann v. Johnston, 425 U.S. 219, 224, <span class=SourcePN>&lt;573 F.2d 1245&gt;</span><A name="573F.2d1245"></A> 189 USPQ 257, 259 (1976).</p>
+
+<p class=Paragraph>The fundamental flaw in the board’s analysis in this case lies in a superficial treatment of the claims. With no reference to the nature of the algorithm involved, the board merely stated that the coverage sought “in practical effect would be a patent on the algorithm itself.” Though the board gave no clear reasons for so concluding, its approach would appear to be that every implementation with a programmed computer equals “algorithm” in the Benson sense. If that rubric be law, every claimed method that can be so implemented would equal nonstatutory subject matter under 35 USC 101. That reasoning sweeps too wide and is without basis in law. The absence, or inadequacy, of detailed claim analysis in the present case is further illustrated by the conclusion that “the novelty resides in the program” when, as here, the claims recite no particular computer program. In the present case, it is not the claims but the <i>specification </i>that discloses implementation of the claimed invention with computer programs.<a href="#_ftn6" name="_ftnref6" title=""><span class=FNRef>6</span></a></p>
+
+<p class=Paragraph>As a bare minimum, application of Benson in a particular case requires a careful analysis of the claims, to determine whether, as in Benson, they recite a “procedure for solving a given type of <i>mathematical </i>problem.” 409 U.S. at 65, 175 USPQ at 674 (emphasis added).</p>
+
+<h2>The Method Claims</h2>
+
+<p class=Paragraph>Appellant’s claims 8-10 define methods of controlling a computer display system. Claim 8 sets forth a process of assigning concatenation points to each character to appear on the display device and specifying which of the concatenation points for adjacent characters will coincide. Claim 9 adds <span class=SourcePN>&lt;197 USPQ 471&gt;</span><A name="197USPQ471"></A> the process limitation of testing and modifying the spatial relationship between adjacent characters to provide minimum clearance therebetween. Claim 10 adds the process limitation of employing a hierarchical tree structure to establish the spatial relationship among a group of characters to appear on the display device.</p>
+
+<p class=Paragraph>Determination of whether a claim preempts nonstatutory subject matter as a whole, in the light of Benson, requires a two-step analysis. First, it must be determined whether the claim directly or indirectly recites an “algorithm” in the Benson sense of that term, for a claim which fails even to recite an algorithm clearly cannot wholly preempt an algorithm. Second, the claim must be further analyzed to ascertain whether in its entirety it wholly preempts that algorithm. We do not reach the second step in this case because method claims 8-10 do not recite an algorithm in the Benson sense.</p>
+
+<p class=Paragraph>We are not unmindful of the need for clear understanding of the term “algorithm.” As we stated in In re Chatfield, supra at 156 n.5, 191 USPQ at 734 n.5:</p>
+
+<p class=BlockQuote>    Over-concentration on the word “algorithm” alone, for example, may mislead. The Supreme Court carefully supplied a definition of the particular algorithm before it, i.e., “[a] procedure for solving a given type of mathematical problem.” The broader definition of algorithm is “a step-by-step procedure for solving a problem or accomplishing some end.” Webster’s New Collegiate Dictionary (1976). It is axiomatic that inventive minds seek and develop solutions to problems and step-by-step solutions often attain the status of patentable invention. It would be unnecessarily detrimental to our patent system to deny inventors patent protection on the <i>sole</i>ground that their contribution could be broadly termed an “algorithm.” <span class=SourcePN>&lt;573 F.2d 1246&gt;</span><A name="573F.2d1246"></A> </p>
+
+<p class=Paragraph>Because every process may be characterized as “a step-by-step procedure * * * for accomplishing some end,” a refusal to recognize that Benson was concerned only with mathematical algorithms leads to the absurd view that the Court was reading the word “process” out of the statute.</p>
+
+<a name="q">
+<p class=Paragraph>The manner in which a claim recites a mathematical algorithm may vary considerably. In some claims, a formula or equation may be expressed in traditional mathematical symbols so as to be immediately recognizable as a mathematical algorithm.</span> See, e.g., In re Richman, 563 F.2d 1026, 195 USPQ 340 (CCPA 1977); In re Flook, 559 F2d 21, 195 USPQ 9 (CCPA 1977), cert. granted sub nom., Parker v. Flook, 46 U.S.L.W. 3446, 196 USPQ 864 (U.S. Jan. 17, 1978) (No. 77-642). <span class=TreatiseQuoted>Other claims may use prose to express a mathematical computation or to indirectly recite a mathematical equation or formula by means of a prose equivalent therefor.</span> See, e.g., In re de Castelet, supra (claims 6 and 7); In re Waldbaum, 559 F.2d 611, 194 USPQ 465 (CCPA 1977). <span class=TreatiseQuoted>A claim which substitutes, for a mathematical formula in algebraic form, “words which mean the same thing,” nonetheless recites an algorithm in the <i>Benson</i> sense. </span>In re Richman, supra at 1030, 195 USPQ at 344. <span class=TreatiseQuoted>Indeed, the claims at issue in <i>Benson</i> did not contain a formula or equation expressed in mathematical symbols. When considered as a whole, each of the claims in <i>Benson</i> did, however, recite in prose a formula for converting binary coded decimal numbers into binary numbers.</span><a href="#_ftn7" name="_ftnref7" title=""><span class=FNRef>7</span></a></p>
+
+<p class=Paragraph>The “local positioning algorithm” described in appellant’s specification is the order of steps in processing the hierarchical tree structure and spatially relating the various characters to be displayed. Appellant has thus used the term “algorithm” as a term of art in its broad sense, i.e., to identify a step-by-step procedure for accomplishing a given result.<a href="#_ftn8" name="_ftnref8" title=""><span class=FNRef>8</span></a></p>
+
+<p class=Paragraph>The method claims here at issue do not recite process steps which are themselves mathematical calculations, formulae, or equations. Each of claims 8, 9, and 10 merely defines a new, useful, and unobvious process for operating a computer display system. The board, therefore, erred in its <span class=SourcePN>&lt;197 USPQ 472&gt;</span><A name="197USPQ472"></A> reliance on Benson as its sole basis for concluding that the present method claims are drawn to nonstatutory subject matter.</p>
+
+<p class=Paragraph>The solicitor argues that appellant carries the solution to the algorithm no further than “a fleeting display on a cathode ray tube,” and that that step constitutes insufficient “post-solution activity.” See In re de Castelet, supra; In re Flook, supra.<a href="#_ftn9" name="_ftnref9" title=""><span class=FNRef>9</span></a> The presence or absence of “post-solution activity” was material in Flook and de Castelet because the claims at issue in those cases recited mathematical equations or calculations as part of the “subject matter as a whole.” That factor called the Benson holding at least prima facie into play. There being no mathematical calculations, equations, or formulae here, and thus no solution to a mathematical algorithm, no question of “post-solution activity” is present.<span class=SourcePN>&lt;573 F.2d 1247&gt;</span><A name="573F.2d1247"></A> </p>
+
+<h2>The Apparatus Claims</h2>
+
+<p class=Paragraph>Though a claim expressed in “means for” (functional) terms is said to be an apparatus claim, the subject matter as a whole of that claim may be indistinguishable from that of a method claim drawn to the steps performed by the “means.” For example, present claim 8 recites process steps of assigning concatenation points to each symbol and specifying which of the concatenation points for adjacent symbols will coincide, and claim 1 merely recites “means for” accomplishing each of these same steps. As another example, claim 3 adds a “means for storing input data in a hierarchical tree structure,” paralleling the process step added by claim 10. We agree with the solicitor’s contention that if allowance of a method claim is proscribed by Benson, it would be anomalous to grant a claim to apparatus encompassing any and every “means for” practicing that very method.<a href="#_ftn10" name="_ftnref10" title=""><span class=FNRef>10</span></a></p>
+
+<p class=Paragraph>The apparatus claims do not directly or indirectly recite any mathematical equation, formula, or calculation and thus do not preempt the use of any mathematical problem-solving algorithm. It is unnecessary, therefore, to consider the effect of specific apparatus limitations in some of the apparatus claims.<a href="#_ftn11" name="_ftnref11" title=""><span class=FNRef>11</span></a></p>
+
+<p class=Paragraph>Because neither the present apparatus claims nor the present method claims recite or preempt a mathematical algorithm as forbidden by Benson, both sets of claims are immune from a rejection based solely on the opinion in that case.</p>
+
+<p class=Paragraph>Accordingly, the decision of the board, rejecting claims 1-10 under 35 USC 101, is <i>reversed.</i></p>
+
+<p class=Paragraph><i>Reversed</i></p>
+
+</div>
+
+<div><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<div id=ftn1>
+
+<p class=FNText><a href="#_ftnref1" name="_ftn1" title=""><span class=FNRef>1</span></a>. Examiner-in-Chief Bennett concurred in reversal of the examiner’s rejections, but disagreed with the board’s interpretation of Benson and refused to join in the board’s rejection.</p>
+
+</div>
+
+<div id=ftn2>
+
+<p class=Paragraph><a href="#_ftnref2" name="_ftn2" title=""><span class=FNRef>2</span></a> Responding to appellant’s use of the word “synergistically” in describing how his “means” operate, the solicitor states:</p>
+
+<p class=BlockQuote>However, it is not apparent how appellant’s programmed digital computer can produce any <i>synergistic </i>result. Instead, the computer will simply do the job it is instructed to do. Where is there any surprising or unexpected result? The unlikelihood of any such result is merely one more reason why patents should not be granted in situations where the only novelty is in the programming of general purpose digital computers. See Sakraida v. Ag Pro, Inc., 425 U.S. 273, 189 USPQ 449 (1976) and A &amp; P Tea Co. v. Supermarket Corp., 340 U.S. 147, 87 USPQ 303 (1950).</p>
+
+<p class=Paragraph>There being no rejection for anticipation under 35 USC 102 or for obviousness under 35 USC 103, the relevance of the foregoing escapes us. The cited cases dealt only with the issue of obviousness. Considerations of novelty or obviousness are of no effect whatever in determining whether particular claims define statutory subject matter under 35 USC 101.</p>
+
+<p class=FNText>It disserves the need for clarity in the law, and unjustly skews the judicial process, when the issue presented and considered below is muddied by disingenuous presentations relating to new and different issues, and without open admission of that relationship. If the desire to “win” (though the law may lose) be so overwhelming as to impel injection of new and different issues at the appellate level, the candor rightfully expected of all lawyers, government and private, requires that the injection be labeled as such.</p>
+
+</div>
+
+<div id=ftn3>
+
+<p class=Paragraph><a href="#_ftnref3" name="_ftn3" title=""><span class=FNRef>3</span></a> 35 USC 101 provides:</p>
+
+<p class=FNText>Whoever invents or discovers any new and useful process, machine, manufacture, or composition of matter, or any new and useful improvement thereof, may obtain a patent therefor, subject to the conditions and requirements of this title.</p>
+
+</div>
+
+<div id=ftn4>
+
+<p class=FNText><a href="#_ftnref4" name="_ftn4" title=""><span class=FNRef>4</span></a> “The question under §103 is whether the<i>subject matter as a whole </i>would have been obvious, not whether the <i>differences</i>[point of novelty] would have been obvious.” In re Buehler, 515 F.2d 1134, 1140, 185 USPQ 781, 786 (CCPA 1975). See In re Van Venrooy, 56 CCPA 1199, 1203 n.4, 412 F.2d 250, 253 n.4, 162 USPQ 37, 39 n.4 (1969). “The question under §103 is whether the <i>subject matter as a whole </i>would have been obvious, not whether the <i>differences </i>[point of novelty] would have been obvious.” In re Buehler, 515 F.2d 1134, 1140, 185 USPQ 781, 786 (CCPA 1975). See In re Van Venrooy, 56 CCPA 1199, 1203 n.4, 412 F.2d 250, 253 n.4, 162 USPQ 37, 39 n.4 (1969).</p>
+
+</div>
+
+<div id=ftn5>
+
+<p class=Paragraph><a href="#_ftnref5" name="_ftn5" title=""><span class=FNRef>5</span></a> In In re Chatfield, supra at 156, 191 USPQ at 734, and in In re Noll, 545 F.2d 141, 148-49 n.6, 191 USPQ 721, 726 n.6 (CCPA 1976), cert. denied, 98 S.Ct. 226, 195 USPQ 465 (1977), this court pointed out that the phrase “these programs” in the Benson opinion necessarily referred to the specific type of program there involved, not to computer programs in general. Though the present invention is not merely a “program,” the solicitor contends that the responsible course would be to deny patents on “software inventions” until Congress sanctions them. The constitutionally responsible course, however, was stated in In re de Castelet, supra at 1240, 195 USPQ at 443:</p>
+
+<p class=FNText>Absent contrary directions, no basis exists for a moratorium on protection of inventions embodying or using computer programs. Such broad prohibition could subject meritorious statutory inventions to unabatable piracy, and could forestall invention disclosure, the hallmark of the patent system, until Congress chooses to act.</p>
+
+</div>
+
+<div id=ftn6>
+
+<p class=FNText><a href="#_ftnref6" name="_ftn6" title=""><span class=FNRef>6</span></a> Appellant characterizes the board’s approach as “effectively a rejection of the disclosure and not of the claims.”</p>
+
+</div>
+
+<div id=ftn7>
+
+<p class=Paragraph><a href="#_ftnref7" name="_ftn7" title=""><span class=FNRef>7</span></a> In Benson claim 8 read, “The method of converting signals from binary coded decimal form into binary which comprises the steps of * * *. 409 U.S. at 73-74, 175 USPQ at 677. Claim 13 read, “A data processing method for converting binary coded decimal number representations into binary number representations comprising the steps of * * *.” Id. The Court described the claimed method as follows:</p>
+
+<p class=FNText>The method sought to be patented varies the ordinary arithmetic steps a human would use by changing the order of the steps, changing the symbolism for writing the multiplier used in some steps, and by taking subtotals after each successive operation. [Id. at 67, 175 USPQ at 675].</p>
+
+</div>
+
+<div id=ftn8>
+
+<p class=FNText><a href="#_ftnref8" name="_ftn8" title=""><span class=FNRef>8</span></a> The preferred definition of “algorithm” in the computer art is: “A fixed step-by-step procedure for accomplishing a given result; usually a simplified procedure for solving a complex problem, also a full statement of a finite number of steps.” C. Sippl &amp; C. Sippl, Computer Dictionary and Handbook (1972).</p>
+
+</div>
+
+<div id=ftn9>
+
+<p class=FNText><a href="#_ftnref9" name="_ftn9" title=""><span class=FNRef>9</span></a> Appellant characterized this court’s holding in Flook as “in effect, that <i>any </i>non-data processing step in a method claim avoids the Benson prohibition.” That characterization is excessively broad.</p>
+
+</div>
+
+<div id=ftn10>
+
+<p class=FNText><a href="#_ftnref10" name="_ftn10" title=""><span class=FNRef>10</span></a> A claim drawn to new, useful, and unobvious apparatus, specifying what that apparatus is, and not merely what it does, would not, on the other hand, be rejectable on the sole ground that the only presently known use for that apparatus is the practice of an unpatentable method. A claim to a new, useful, and unobvious computer, describing that computer in truly structural terms, would not be rejectable on the ground that the only known use for that computer is the performance of unpatentable methods of calculation. To assert the contrary, on a “preempt an unpatentable method” theory, would be to deny the incentive of the patent system to research and development in the field of computer-building technology.</p>
+
+</div>
+
+<div id=ftn11>
+
+<p class=FNText><a href="#_ftnref11" name="_ftn11" title=""><span class=FNRef>11</span></a> In In re Noll, note 4 supra, no mathematical calculation formula, equation or algorithm was recited in or preempted by apparatus claims 2-9. Claim 10 recited, in “means for” language, a calculation “method.” The “means for” language of claim 10 did not preempt the method, because claim 10 included all of the apparatus of claim 9, from which claim 10 depended. Hence, the calculation method remained free for use by anyone not employing the entire apparatus of claim 9. We did not, in Noll, hold that the mere presence of apparatus language in a claim will, of itself, save that claim from rejection as nonstatutory.</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
