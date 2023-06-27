@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>Digital Law Online: New Software from Old</title>
+<link rel="Stylesheet", type="text/css", HREF="treatise.sty">
+</head>
+
+<body>
+<img src="treatise.jpg" width="800" height="100">
+
+<table border="0">
+ <tr>
+  <td valign="top" width="130" bgcolor="#F0F0F0">
+<hr size="2">
+<p class="toc1">Table of Contents:</p>
+<hr>
+<p class="toc1"><a style="color:black", HREF="treatise1.html">Introduction to the online version</a></p>
+<p class="toc1"><a style="color:black", HREF="treatise2.html">Foreword</a></p>
+<p class="toc1"><a style="color:black", HREF="treatise3.html">Preface to the printed version</a></p>
+<p class="toc1"><a style="color:black", HREF="treatise4.html">Copyright Overview</a></p>
+<hr>
+<p class="toc1"><a style="color:black", HREF="treatise17.html">Software Copyright</a></p>
+<p class="toc2"> - <a style="color:black", HREF="treatise17.html">History</a></p>
+<p class="toc2"> - <a style="color:black", HREF="treatise18.html">Copyrights or Patents?</a></p>
+<p class="toc2"> - <a style="color:black", HREF="treatise19.html">Object Code</a></p>
+<p class="toc2"> - <a style="color:black", HREF="treatise20.html">RAM Copies</a></p>
+<p class="toc2"> - <a style="color:black", HREF="treatise21.html">Beyond Mere Copying</a></p>
+<p class="toc3"> &nbsp;&nbsp; - <a style="color:black", HREF="treatise22.html">Abstraction, Filtration, Comparison</a></p>
+<p class="toc3"> &nbsp;&nbsp; - <a style="color:black", HREF="treatise23.html">Methods of Operation</a></p>
+<p class="toc3"> &nbsp;&nbsp; - <a style="color:black", HREF="treatise24.html">Applying The AFC Test</a></p>
+<p class="toc2"> - <a style="color:black", HREF="treatise25.html">Reverse Engineering</a></p>
+<p class="toc2"> - <a style="color:black", HREF="treatise26.html">Other Issues</a></p>
+<p class="toc3"> &nbsp;&nbsp; - <font color="green">New Software from Old</font></p>
+<p class="toc2"> - <a style="color:black", HREF="treatise28.html">Summary</a></p>
+<hr>
+<p class="toc1"><a style="color:black", HREF="treatise29.html">Digital Copyright</a></p>
+<p class="toc1"><a style="color:black", HREF="treatise52.html">Patent Overview</a></p>
+<p class="toc1"><a style="color:black", HREF="treatise60.html">Software Patents</a></p>
+<hr>
+<p class="toc1"><a style="color:black", HREF="treatise-toc.html">Full treatise table of contents</a></p>
+</td>
+
+<td width="15"></td>
+<td valign="top">
+<p align=center style="text-indent: 0;font: small-caps 12 pt Verdana, Arial, sans-serif; color: green;">
+<a HREF="../index.html" style="color: green">Home</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<a HREF="../notice.htm" style="color: green">Copyright/Other Information</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<a HREF="../comments.htm" style="color: green">Send Comments</a></p>
+<hr>
+
+<p class=Chapter>Chapter 2: Copyright of Computer Programs</p>
+<a name="secVI.D."></a>
+<a name="secVI.C."></a> <!-- For compatibility with a past bug -->
+<h2>VI.D. New Software from Old</h2>
+
+<p class=Paragraph>Most computer programs are based to some degree on other computer programs. They could be new implementations of existing programs (for instance, Linux reimplementing Unix) or new programs influenced by an existing program (the first spreadsheet program, VisiCalc, influenced Lotus 1-2-3, which influenced Microsoft Excel), or they could use a preexisting library as part of the final computer program.</p>
+
+<p class=Paragraph>Obviously, there are a number of copyright considerations when creating a new computer program based on an existing one.</p>
+
+<a name="secVI.D.1."></a>
+<a name="secVI.D."></a> <!-- For compatibility with a past bug -->
+<h3>VI.D.1. Using a Clean Room</h3>
+
+<p class=Paragraph>It is not necessary to be looking at an existing program while writing a new program for the new program to infringe the reproduction right in the existing program. The copying could be unconscious. In <i>ABKCO Music v. Harrisongs Music</i>, <span class=footnote>{FN105: <a HREF="cases/221PQ490.htm">722 F.2d 988</a>, <a HREF="cases/221PQ490.htm">221 USPQ 490</a> (2d Cir. 1983)}</span>  George Harrison was found to have infringed the copyright of “He’s So Fine,’” a song that he had heard years before, when he wrote “My Sweet Lord.” If you have had access to the source of a computer program, you need to be particularly concerned that you aren’t unconsciously copying the original program when you write a similar program.</p>
+
+<p class=Paragraph>One way to avoid infringement when writing a program that is similar to another program is through the use of a “clean room” procedure. This is what was done when companies cloned the BIOS of the IBM personal computer to produce compatible systems. In a clean room procedure, there are two separate teams working on the development of the new program.</p>
+
+<p class=Paragraph>The first team determines how the original program works, by examining its source code if it is available (IBM published the source code for its BIOS in a technical manual), by reverse engineering the program (by converting its object code back to source code and attempting to understand it or by testing it to see how it behaves), or by studying available user manuals and other descriptions of the program’s function. This first team puts together a complete technical specification that describes the functioning of the original program. Such a specification is not an infringement, since the copyright in the original program doesn’t protect its functionality, only the expression in the program that creates that functionality. Generally, an intellectual property attorney will review the functional specification to assure that it does not contain any protected expression from the original program.</p>
+
+<p class=Paragraph>Given the functional specification, a second team of programmers, metaphorically in a “clean room” uncontaminated by the original program, implements the new program. These programmers have not seen the source code of the original program. In fact, it is best if they have never seen any aspect of the original program, getting all their knowledge of it from the functional specification. Because they haven’t seen the original program, they cannot be copying it, even unconsciously.</p>
+
+<p class=Paragraph>A limited clean room was used by programmers at Altai when they discovered that one of their employees had written a program that included portions of a program he had worked on at a competitor. Although <i>Computer Associates v. Altai</i> <span class=footnote>{FN106: <a HREF="cases/23PQ2D1241.htm">982 F.2d 693</a>, <a HREF="cases/23PQ2D1241.htm">23 USPQ2d 1241</a> (2d Cir. 1992)}</span>  does not spend much time on the clean room aspects of Altai’s new implementation, it does suggest that such a procedure results in a program that does not infringe as long as the portions that are similar are dictated by function.</p>
+
+<a name="secVI.D.2."></a>
+<a name="secVI.D.1."></a> <!-- For compatibility with a past bug -->
+<h3>VI.D.2. Piecewise Reimplementation</h3>
+
+<p class=Paragraph>Many people have reimplemented computer programs by rewriting them to replace the source code with code of their own writing. There is no reason to believe that this would not be a copyright infringement, particularly if the reimplementer had access to the source code of the original program, even if none of the original source code remains.</p>
+
+<p class=Paragraph>When the first segment of code is rewritten, the new code will be an infringing work if it is substantially similar to the original code, or may be an infringing derivative work if it is a reimplementation in a different programming language. That reimplemented first segment is combined with the remaining parts of the original program to form an intermediate version. Subsequent modifications produce another work. So when you have completed the piecewise reimplementation, you have a set of works, each of whose creation infringes the exclusive rights of the owner of the copyright of the original program.</p>
+
+<p class=Paragraph>As an analogy, consider the translation of a novel to a different language, something that would clearly be a derivative work. It makes little difference that none of the original words remain, or that the translation was done a little at a time. The resulting translation is still an infringing derivative work.</p>
+
+<p class=Paragraph>Even if you completely replace the program with new code, nonliteral elements also protected by the original program’s copyright are likely to remain and infringe – elements like the overall program structure or architecture and data structures that are not dictated by external or efficiency considerations. Although there is no case law on this point, it would seem that the only way to break the chain of infringing works is by some extraordinary act, such as a clean room implementation.</p>
+
+<a name="secVI.D.3."></a>
+<a name="secVI.D.2."></a> <!-- For compatibility with a past bug -->
+<h3>VI.D.3. Section 117 Adaptations</h3>
+
+<p class=Paragraph>Most computer programs are covered by a series of copyrights, each coming into being when a portion of the program is written or modified. The copyright on each nontrivial modification is as a derivative work of some preexistent program. One of the exclusive rights of a copyright owner is the right to control the preparation of any derivative works, so generally only somebody with the permission of the copyright owner can modify a computer program.</p>
+
+<p class=Paragraph>There is a special exception in Section 117 that permits the owner of a copy of a computer program “to make or authorize the making of another copy or adaptation of that computer program provided that such a new copy or adaptation is created as an essential step in the utilization of the computer program in conjunction with a machine and that it is used in no other manner.” <span class=footnote>{FN107: <a HREF="http://www4.law.cornell.edu/uscode/17/117.html">17 U.S.C. §117</a>}</span>  This exception recognizes that it is sometimes necessary to configure or otherwise modify a computer program as part of its installation or to run it. While in theory this adaptation exception would allow somebody to redo Microsoft Access to run on a Macintosh, in reality such an adaptation even with access to the source code would be impractical for an individual user.</p>
+
+<p class=Paragraph>Note that Section 117 also requires the permission of the computer program’s copyright owner to transfer the adaptations you have made. So Section 117’s adaptation right is personal to each owner of a copy of a computer program and does not allow the sharing of such adaptations.</p>
+
+<a name="secVI.D.4."></a>
+<a name="secVI.D.3."></a> <!-- For compatibility with a past bug -->
+<h3>VI.D.4. Derivative Works and Compilations</h3>
+
+<p class=Paragraph>Until now, we have been discussing computer programs as if they were a single work, or an original program and a series of derivative works comprising each modification to that program. While that was the case for early computer programs, now it is more common for a program to include preexisting libraries, themselves copyrighted computer programs, and similar components.</p>
+
+<p class=Paragraph>When two or more preexisting works are combined to form a new work, in copyright law that work is called a “compilation” – “a work formed by the collection and assembling of preexisting materials or of data that are selected, coordinated, or arranged in such a way that the resulting work as a whole constitutes an original work of authorship.” The copyright in the resulting overall computer program comprises the copyrights in the preexisting component computer programs and a new copyright in the compilation. But that compilation copyright is very limited.</p>
+
+<p class=BlockQuote>The copyright in a compilation or derivative work extends only to the material contributed by the author of such work, as distinguished from the preexisting material employed in the work, and does not imply any exclusive right in the preexisting material. The copyright in such work is independent of, and does not affect or enlarge the scope, duration, ownership, or subsistence of, any copyright protection in the preexisting material. <span class=footnote>{FN108: <a HREF="http://www4.law.cornell.edu/uscode/17/103.html">17 U.S.C. §103</a>(b)}</span> </p>
+
+<p class=Paragraph>This means that to distribute the overall computer program, there must be permission from the copyright owners of all the component computer programs. It is important before distributing a program using a library that the license that accompanied that library allow the redistribution of the library in the way intended, or else the distribution right for that library will be infringed.</p>
+
+<p class=Paragraph>An interesting situation arises when an application program is distributed without the libraries it needs, and those libraries are supplied at a later time by the user of the application program. While this may initially seem like a strange procedure, it actually is common for today’s software. Most programs do not run stand-alone on a machine but use the services of an operating system – a special type of preexisting library. Most operating systems also provide dynamic linking to a library, so that the library can be shared by all the programs that are using it.</p>
+
+<p class=Paragraph>In this discussion, “library” indicates a preexisting program used by a new “applications program,” because that is one of the most common instances of what is being discussed. However, the discussion is just as applicable to libraries that work with a preexisting operating system, or plug-ins that work with a preexisting browser.</p>
+
+<p class=Paragraph>With dynamically-linked libraries, the application program being distributed is no longer a compilation that includes the library. Because the library is not being distributed with the application program, no permission is needed from the copyright owner of the library for the distribution to users. Users must, of course, be authorized to use the library, but if they are owners of a copy of the library, under Section 117 they can make any adaptations of the library necessary to use it with the application program.</p>
+
+<p class=Paragraph>Some have claimed that an application program that needs a library for its operation is a derivative work of that library. They take that position because the application program is “based on” the library because it was written to use the subroutines and other aspects of the library.</p>
+
+<p class=Paragraph>Such a position is misplaced. Even though the definition of a derivative work contained in Section 101 seems to support such a reading when it talks about a derivative work’s being “based upon one or more preexisting works,” the examples all illustrate derivative works where the original work is somehow incorporated or recast in the derivative work:</p>
+
+<p class=BlockQuote>A “derivative work” is a work based upon one or more preexisting works, such as a translation, musical arrangement, dramatization, fictionalization, motion picture version, sound recording, art reproduction, abridgment, condensation, or any other form in which a work may be recast, transformed, or adapted. A work consisting of editorial revisions, annotations, elaborations, or other modifications which, as a whole, represent an original work of authorship, is a “derivative work”. <span class=footnote>{FN109: <a HREF="http://www4.law.cornell.edu/uscode/17/101.html">17 U.S.C. §101</a>}</span> </p>
+
+<p class=Paragraph>This need to use a portion of the original work in the derivative work is stated in the legislative history of the Copyright Act of 1976, where the drafters discussed when the derivative work exclusive right is infringed:</p>
+
+<p class=BlockQuote>To be an infringement the “derivative work” must be “based upon the copyrighted work,” and the definition in section 101 refers to “a translation, musical arrangement, dramatization, fictionalization, motion picture version, sound recording, art reproduction, abridgment, condensation, or any other form in which a work may be recast, transformed, or adapted.” Thus, to constitute a violation of section 106(2), the infringing work must incorporate a portion of the copyrighted work in some form; for example, a detailed commentary on a work or a programmatic musical composition inspired by a novel would not normally constitute infringements under this clause. <span class=footnote>{FN110: H.R. Rep. No. 94-1476 at <a HREF="quotes/fn2-110.htm#q">62</a>}</span> </p>
+
+<p class=Paragraph>It could be argued that the component program really does include portions of the library that it uses – data structures that are passed as parameters, or even the parameter lists themselves. But elements dictated by external considerations are filtered out when trying to determine whether there is copyright infringement.</p>
+
+<p class=Paragraph>No other conclusion makes sense. If it were not the case, then any program using the applications program interfaces (APIs) of an operating system could be considered a derivative work of that operating system. And, under the exclusive right to prepare derivative works, the copyright owner of an operating system such as Microsoft Windows could control who was allowed to write programs for that operating system.</p>
+
+
+<br>
+<p style="text-align:center">
+<a style="color:green" HREF="treatise28.html">
+Next section: Summary</a></p>
+
+<hr>
+<p align=center style="text-indent: 0;font: 10 pt Verdana, Arial, sans-serif; color: gray">
+Copyright &copy; 2002, Lee A. Hollaar.
+See <a HREF="../notice.htm">information regarding permitted usage</a>.</p>
+  </td>
+ </tr>
+</table>
+</body>
+</html>
